@@ -1,0 +1,81 @@
+.box{
+  border: 1px solid #dddddd;
+  box-shadow: 3px 5px 20px #b4b1b1;
+  margin: 8px 1% 8px 1%;
+  width: 98%;
+  height: 6cm;
+}
+
+.post-box{
+  float: left;
+  width: 80%;
+  height: 6cm;
+  clear: right;
+}
+
+.post-box img {
+  float: left;
+  margin: 12px 0 0 12px;
+  width: 170px;
+  height: 120px;
+}
+
+.post-box h4 {
+  margin-left: 5.2cm;
+}
+
+
+.post-box p {
+  color: #444444;
+  line-height: 20px;
+  font-size: 0.8em;
+  margin-left: 5.2cm;
+}
+
+.post-time {
+  margin-left: 5.2cm;
+  font-size: 0.9em;
+  color: #888888;
+}
+
+.line{
+  margin-top: 0.5cm;
+  width: 1px;
+  height: 5cm;
+  background-color: #dddddd;
+  position: absolute;
+  right: 7cm;
+}
+
+.author-box{
+  float: right;
+  width: 6.5cm;
+  height: 6cm;
+  text-align: center;
+}
+
+.author-box img{
+  margin-top: 10%;
+  height: 85px;
+  width: 85px;
+  border-radius: 50%;
+}
+
+.author-name{
+  color: #cc0025;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.author-place{
+  font-size: 0.7em;
+  margin-top: 10px;
+}
+
+.author-regist{
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
