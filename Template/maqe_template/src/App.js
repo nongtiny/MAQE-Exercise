@@ -24,14 +24,14 @@ function getPostTimeLength(time){
   let todayDate = parseInt(today.slice(8,10));
   let postDate = parseInt(post.slice(8,10));
   if ( todayYear > postYear) {
-    return  `⏲ ${todayYear - postYear}  ${(todayYear - postYear) > 1 ? 'years': 'year'}`;
+    return  `${todayYear - postYear}  ${(todayYear - postYear) > 1 ? 'years ago': 'year ago'}`;
   } else if (todayMonth > postMonth) {
-    return `⏲ ${todayMonth - postMonth}  ${(todayMonth - postMonth) > 1 ? 'months': 'month'}`;
+    return `${todayMonth - postMonth}  ${(todayMonth - postMonth) > 1 ? 'months ago': 'month ago'}`;
   } else if (todayDate > postDate) {
       if (todayDate - postDate > 6) {
-        return `⏲ ${(todayDate - postDate) % 6}  ${(todayDate - postDate) % 6 > 1 ? 'weeks': 'week'}`;
+        return `${(todayDate - postDate) % 6}  ${(todayDate - postDate) % 6 > 1 ? 'weeks ago': 'week ago'}`;
       } else {
-        return `⏲ ${(todayDate - postDate)}  ${(todayDate - postDate) > 1 ? 'days': 'day'}`;        
+        return `${(todayDate - postDate)}  ${(todayDate - postDate) > 1 ? 'days ago': 'day ago'}`;        
       }
   }
 }
@@ -55,8 +55,13 @@ const Layout = () => {
       <div className="post-box">
         <img src={post.image_url}/>     
         <h4>{post.title}</h4>
-        <p>{post.body}</p>   
-        <div className="post-time">
+        <p>{post.body}</p>
+        <div className="post-time"> 
+          <img
+            className="clock-icon" 
+            src="https://vignette.wikia.nocookie.net/monbattle/images/9/9f/Clock_Icon.png/revision/latest?cb=20150411181655"
+              
+            /> 
           {
             getPostTimeLength(post.created_at)
           }
@@ -67,7 +72,10 @@ const Layout = () => {
         <img src={getAuthorName(post.author_id).avatar_url}/>
         <div className="author-name">{getAuthorName(post.author_id).name}</div>
         <div className="author-regist">{getAuthorName(post.author_id).role}</div>
-        <div className="author-place">{getAuthorName(post.author_id).place}</div>
+        <div className="author-place">
+          <img className="icon-place" src="http://icons-for-free.com/free-icons/png/512/216661.png"/>
+          {getAuthorName(post.author_id).place}
+        </div>
       </div>
     </div>
       );

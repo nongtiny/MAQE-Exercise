@@ -1,7 +1,7 @@
 .box{
   border: 1px solid #dddddd;
-  box-shadow: 3px 5px 20px #b4b1b1;
-  margin: 8px 1% 8px 1%;
+  box-shadow: -2px 4px 20px -8px #b4b1b1;
+  margin: 20px 1% 20px 1%;
   width: 98%;
   height: 6cm;
 }
@@ -34,8 +34,19 @@
 
 .post-time {
   margin-left: 5.2cm;
-  font-size: 0.9em;
-  color: #888888;
+  font-size: 0.85em;
+  font-weight: bold;
+  font-style: italic;
+  color: #aaaaaa;
+}
+
+.post-time img{
+  position: relative;
+  top: -10px;
+  left: -10px;
+  width: 15px;
+  height: 15px;
+  filter: opacity(35%);
 }
 
 .line{
@@ -69,9 +80,19 @@
 }
 
 .author-place{
-  font-size: 0.7em;
-  margin-top: 10px;
+  position: relative;
+  top: -10px;
+  font-size: 0.8em;
 }
+
+.author-place img{
+  position: relative;
+  top: 1px;
+  margin-right: 4px;
+  width: 8px;
+  height: 11px;
+}
+
 
 .author-regist{
   font-weight: bold;
