@@ -23,6 +23,7 @@ function getPostTimeLength(time){
   let postMonth = parseInt(post.slice(5,7));
   let todayDate = parseInt(today.slice(8,10));
   let postDate = parseInt(post.slice(8,10));
+
   if ( todayYear > postYear) {
     return  `${todayYear - postYear}  ${(todayYear - postYear) > 1 ? 'years ago': 'year ago'}`;
   } else if (todayMonth > postMonth) {
@@ -52,41 +53,41 @@ const Layout = () => {
     posts.map( (post, i) => {
       return(
       <div className="box" style={{background: `${i % 2 === 0 ? 'white' : '#EEE'}`}}>
-      <div className="post-box">
-        <img src={post.image_url}/>     
-        <h4>{post.title}</h4>
-        <p>{post.body}</p>
-        <div className="post-time"> 
-          <img
-            className="clock-icon" 
-            src="https://vignette.wikia.nocookie.net/monbattle/images/9/9f/Clock_Icon.png/revision/latest?cb=20150411181655"
-              
-            /> 
-          {
-            getPostTimeLength(post.created_at)
-          }
+        <div className="post-box"> 
+          <img className="post-box-img" src={post.image_url}/>    
+          <div className="post-content">
+            <div className="post-topic">
+              {post.title}
+            </div>
+            <div className="post-body">
+              {post.body}
+            </div>
+            <div className="post-time"> 
+            <img
+              className="clock-icon" 
+              src="https://vignette.wikia.nocookie.net/monbattle/images/9/9f/Clock_Icon.png/revision/latest?cb=20150411181655"
+                
+              /> 
+            { 
+              getPostTimeLength(post.created_at)
+            }
+          </div>
+          </div>
+
+          <div className="line"></div>  
+          <div className="author-box">
+            <img src={getAuthorName(post.author_id).avatar_url}/>
+            <div className="author-name">{getAuthorName(post.author_id).name}</div>
+            <div className="author-regist">{getAuthorName(post.author_id).role}</div>
+            <div className="author-place">
+              <img className="icon-place" src="http://icons-for-free.com/free-icons/png/512/216661.png"/>
+              {getAuthorName(post.author_id).place}
+            </div>
+          </div>
         </div>
       </div>
-      <div className="line"></div>  
-      <div className="author-box">
-        <img src={getAuthorName(post.author_id).avatar_url}/>
-        <div className="author-name">{getAuthorName(post.author_id).name}</div>
-        <div className="author-regist">{getAuthorName(post.author_id).role}</div>
-        <div className="author-place">
-          <img className="icon-place" src="http://icons-for-free.com/free-icons/png/512/216661.png"/>
-          {getAuthorName(post.author_id).place}
-        </div>
-      </div>
-    </div>
       );
     })
-  );
-}
-
-const PostList = () => {
-  return(
-    <>
-    </>
   );
 }
 
@@ -102,3 +103,8 @@ class App extends Component {
 }
 
 export default App;
+
+// {post.title}
+          
+//           {post.body}
+          

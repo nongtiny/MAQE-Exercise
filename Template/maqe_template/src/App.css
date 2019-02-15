@@ -3,37 +3,47 @@
   box-shadow: -2px 4px 20px -8px #b4b1b1;
   margin: 20px 1% 20px 1%;
   width: 98%;
-  height: 6cm;
+  padding: 10px 0;
+  height: auto;
 }
 
-.post-box{
+.post-box-img{
   float: left;
   width: 80%;
   height: 6cm;
   clear: right;
-}
-
-.post-box img {
   float: left;
-  margin: 12px 0 0 12px;
+  margin: 0.4em 0 0 1em;
   width: 170px;
   height: 120px;
 }
+  
 
-.post-box h4 {
-  margin-left: 5.2cm;
+.post-box{
+  min-height: 14em;
 }
 
+.post-content{
+  float: left;
+  display: block;
+  margin-left: 1em;
+  width: 52em;
+  line-height: 1.7em;
+}
 
-.post-box p {
-  color: #444444;
-  line-height: 20px;
+.post-topic{
+  margin-top: 0.4em;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.post-body{
+  margin-top: 0.4em;
   font-size: 0.8em;
-  margin-left: 5.2cm;
 }
 
 .post-time {
-  margin-left: 5.2cm;
+  margin-top: 0.4em;
   font-size: 0.85em;
   font-weight: bold;
   font-style: italic;
@@ -41,18 +51,18 @@
 }
 
 .post-time img{
+  margin-right: 0.4em;
   position: relative;
-  top: -10px;
-  left: -10px;
+  top: 0.15em;
   width: 15px;
   height: 15px;
   filter: opacity(35%);
 }
 
 .line{
-  margin-top: 0.5cm;
+  margin-top: 0.7em;
   width: 1px;
-  height: 5cm;
+  height: 13em;
   background-color: #dddddd;
   position: absolute;
   right: 7cm;
@@ -66,22 +76,23 @@
 }
 
 .author-box img{
-  margin-top: 10%;
+  margin-top: 1em;
   height: 85px;
   width: 85px;
   border-radius: 50%;
 }
 
 .author-name{
+  margin-top: 1em;
   color: #cc0025;
   font-size: 0.9em;
   font-weight: bold;
-  margin-top: 10px;
 }
 
 .author-place{
   position: relative;
   top: -10px;
+  margin-top: 1em;
   font-size: 0.8em;
 }
 
@@ -97,6 +108,6 @@
 .author-regist{
   font-weight: bold;
   font-size: 1em;
-  margin-top: 10px;
+  margin-top: 1em;
 }
 
